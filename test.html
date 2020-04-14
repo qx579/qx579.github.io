@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      function createFunctions(){ 
+              var result = new Array(); 
+
+ 
+ for (let i=0; i < 10; i++){     
+         result[i] = function(){  
+                        return i;      
+                       }  } 
+
+ return result; }  
+var i= createFunctions();
+console.log(i)
+    </script>
+</head>
+<body>
+    <button>测试1</button>
+<button>测试2</button>
+<button>测试3</button>
+<script type="text/javascript">
+   var btns = document.getElementsByTagName('button')
+    for (var i = 0; i < btns.length; i++) {
+        (function(num){
+      btns[i].onclick = function(){
+        console.log('第' + (num + 1) + '个')}
+      })(i)
+    }
+
+
+    var a=3,b=0;
+
+
+
+      function onMyLoad(){   
+   var arr = document.getElementsByTagName("p"); 
+           for(var i = 0; i < arr.length;i++){     
+               arr[i].onclick = function(){    
+                        alert(i);           
+             }            }        }   
+     
+    
+        
+ for(var i = 0;i<arr.length;i++){ 
+     (function (arg) {   
+           arr[i].onclick = function () { 
+                       alert(arg);     
+                         }    })(i);  }
+
+ for(var i = 0;i<arr.length;i++){ 
+    arr[i].i = i;
+    arr[i].onclick = function () {
+        alert(this.i);    }}
+
+for(var i = 0; i<arr.length;i++){
+    arr[i].onclick = (function(arg){      
+        return function () {       
+                 alert(arg);       
+                 }    })(i);}
+
+
+for(var i = 0; i<arr.length;i++){  
+    (function(){       var temp = i;
+        arr[i].onclick = function () {  
+            alert(temp);        }    })();}
+for(var i = 0;i<arr.length;i++){
+            let j = i;//创建一个块级变量    
+                arr[i].onclick = function () {    
+                            alert(j);        }    
+
+
+console.log(g)
+</script>
+</body>
+</html>
