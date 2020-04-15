@@ -1,107 +1,355 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Top</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <script type="text/javascript">
+        function search(){
+            document.getElementById("searchform").submit();
+        }
+        function recode(data){
+            var data_uri = encodeURI(encodeURI(data));
+            alert(data_uri);
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        //退出确认框
+        function confirm_logout() {
+            var msg = "您确定要退出登录吗？";
+            if (confirm(msg)==true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
 </head>
+<body >
+<!--S=页面的顶部-->
+<div class="top" id="top1">
+    <div class="topl"> 欢迎您来到呓语书屋！</div>
+    <div class="topr">
+        <ul>
+            <li><i class="iconfont">&#xe635;</i>首页</a></li>
+            <li> <i class="iconfont">&#xe657;</i>购物车</a></li>
+            <li> <i class="iconfont">&#xe65d;</i>订单</a></li>
+            <li> <a href="login.html"><i class="iconfont">&#xe653;</i>登录</a> </li>
+           <li><a href="register.html"><i class="iconfont">&#xe635;</i>注册</a></li>
+           
+        </ul>
+    </div>
+</div>
 
-<link rel="stylesheet" href="jquery.mCustomScrollbar.css" />
-<link rel="stylesheet" type="text/css" href="index.css" /> 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="progress.js"></script>
-<script src="player.js"></script>
-<script src="index.js"></script>
-<body>
-    <div class="bg"></div>
-    <div class="box">
-        <div class="top">
-            <div class="img">
-                <p>我的音乐</p>
-            </div>
-            <ul>
-                <li>登录</li>
-                <li>注册</li>
-            </ul>
-        </div>
-        <div class="conter">
-            <div class="conter-in">
-                <div class="conter-in-left">
-                    <div class="conter-in-top">
-                        <span>收藏</span>
-                        <span>下载</span>
-                        <span>删除</span>
-                        <span>添加到</span>
-                        <span>清空列表</span>
-                    </div>
-                    <div class="conter-in-buttom" >
-                    <ul class="mu" data-mcs-theme="minimal">
-                        <li class="music-list-top">
-                            <div class="ico">                  
-                            </div>
-                            <div class="song">歌曲</div>
-                            <div class="singer">歌手</div>
-                            <div class="time">时长</div>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-                <div class="conter-in-right">
-                    <div class="song-info">
-                        <div class="song-photo">
-                        <img src="" alt=""></div>
-                        <div class="song-name">歌曲名称：<a class="songname"></a></div>
-                        <div class="singer-name">歌手名：<a class="singername"></a></div>
-                    </div>
-                    <div class="song-lyric">
-                        <ul>
-                            <li class="sp">crash</li>
-                            <li>hard</li>
-                            <li>ans ndeoj fr4jgoij4</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="bottom-in">
-                <div class="play">
-                    <span class="last"><img src="./img/weibiaoti-.png" alt=""></span>
-                    <span class="repalce"><img src="./img/bofang_1.png" alt=""></span>
-                    <span class="repalces"><img src="./img/zanting.png" alt=""></span>
-                    <span class="next"><img src="./img/weibiaoti-_1.png" alt=""></span>
-                </div>
-                <div class="ing">
-                  <div class="ing-top">
-                      <span class="ing-message"></span>
-                      <span class="ing-time"></span>
-                  </div>
-                  <div class="ing-buttom">
-                    <div class="ing-line">
-                        <div class="ing-point"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="buttom-info">
-                        <span><img src="./img/icon-_1.png" alt=""></span>
-                        <span><img src="./img/aixin.png" alt=""></span>
-                        <span><img src="./img/taolunqu.png" alt=""></span>
-                </div>
-                <div class="vioce">
-                    <div class="vioce-img"><img src="./img/shengyin.png" alt=""></div>
-                    <div class="vioce-imgno"><img src="./img/jingyin.png" alt=""></div>
-                    <div class="vioce-buttom">
-                        <div class="vioce-line">
-                            <div class="vioce-point"></div>
-                        </div>
-                      </div>
-                </div>
+<!--S=logo-->
+<div class="logo">
+    <div class="logol"></div>
+    <div class="header-search">
+        <form action="" class="search-form" id="searchform">
+            <input type="text" name="textfield" class="search-text" id="textfield" placeholder="请输入书名">
+            <input type="submit" id="top1" value="搜索" class="search-btn" onclick="search()"/>
+        </form>
+    </div>
+</div>
+<div class="na">
+    <div class="nav">
+        <ul>
+            <li class="dropdown"> <a href="">哲学类</a></li>
+            <li class="dropdown"> <a href="">文学类</a></li>
+            <li class="dropdown"> <a href="">漫画类</a></li>
+            <li class="dropdown"> <a href="">科技类</a></li>
+            <li class="dropdown"> <a href="">语言文学类</a></li>
+            <li class="dropdown"> <a href="">艺术类</a></li>
+        </ul>
+    </div>
+</div>
+<div class="guide">
+    <a href="" class="edit" title="购物车">
+        <i class="iconfont">&#xe622;</i></a>
+    <a href="" class="dingdan" title="订单">
+        <i class="iconfont">&#xe607;</i></a>
+    <a href="#top1" class="report" title="搜索"><i class="iconfont">&#xe60a;</i></a>
+    <a href="#top1" class="top2" title="回顶部"><i class="iconfont"> &#xe616;</i></a>
+</div>
 
-                
+<!--轮播-->
+<div id="box_autoplay">
+    <div class="list">
+        <ul>
+            <li><img src="img/5.jpg"/></li>
+            <li><img src="img/4.jpg"/></li>
+            <li><img src="img/6.jpg"/></li>
+            <li><img src="img/7.jpg"/></li>
+        </ul>
+    </div>
+</div>
+
+<!--S=发现好书-->
+<div class="act">
+    <div class="topic">发现好书</div>
+    <div class="actl">
+        <img src="img/8.jpg"/>
+    </div>
+    <div id="photo-list">
+        <ul id="scroll">
+            <li><a href=""><img src="img/s1.jpg" width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s2.jpg"  width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s3.jpg"  width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s4.jpg"  width="200px"  height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s5.jpg" width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s6.jpg"  width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s7.jpg"  width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s8.jpg"  width="200px"  height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s9.jpg"  width="200px" height="200px" alt=""></a></li>
+            <li><a href=""><img src="img/s10.jpg"  width="200px"  height="200px" alt=""></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--S=好书推荐-->
+<div class="material">
+    <div class="topic">好书推荐</div>
+    <div id="lists" class="seckill-goods">
+        <ul class="clearfix active">
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+            <li>
+                <div class="bg">
+                    <a href="info.html">
+                        <img src="img/h6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="info">
+                    <a class="name" href="">海子的诗</a>
+                    <a class="price"href="">￥30 </a>
+                    <a class="name" href="">海子 </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--热门作者-->
+<div class="remen">
+    <div class="topic">热门作者</div>
+    <div class="first">
+
+        <div class="first-t">
+            <div class=first-t-l>
+                <a href="">
+                    <img src="img/z1.jpg" alt="">
+                </a>
             </div>
+            <div class=first-t-r>
+                    <h3 class="name" style="margin-left: 2px" href="" >三毛 </h3>
+                    <p href="">三毛的作品情感真实，没有太多的粉饰，而是展现生活的原貌和生活中的智慧与趣味。三毛的作品具有浓郁的抒情色彩。无论是小说还是散文，她的文字里总是流露着女性的柔美和细腻。</p>
+            </div>
+        </div>
+
+        <div class="first-t">
+            <div class=first-t-l>
+                <a href="">
+                    <img src="img/z1.jpg" alt="">
+                </a>
+            </div>
+            <div class=first-t-r>
+                    <h3 class="name" style="margin-left: 2px" href="" >三毛 </h3>
+                    <p href="">三毛的作品情感真实，没有太多的粉饰，而是展现生活的原貌和生活中的智慧与趣味。三毛的作品具有浓郁的抒情色彩。无论是小说还是散文，她的文字里总是流露着女性的柔美和细腻。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="order">
+        <ul class="shi">
+            <li> 1  大冰</li>
+            <li> 2  陈磊</li>
+            <li> 3  张皓宸</li>
+            <li> 4  村上春树</li>
+            <li> 5  东野圭吾</li>
+            <li> 6  汪曾祺</li>
+            <li> 7  冯唐</li>
+            <li> 8  余华</li>
+            <li> 9  路遥</li>
+            <li> 10  川端康成</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--S=底部-->
+<div class="bottom" >
+    <div class="bottom_t">
+        <div class="inner">
+            <div class="footer pic01"><a  href="#" target="_blank"></a></div>
+            <div class="footer pic02"><a  href="#" target="_blank" ></a></div>
+            <div class="footer pic03"><a  href="#" target="_blank" ></a></div>
+            <div class="footer pic04"><a  href="#" target="_blank" ></a></div>
         </div>
     </div>
-    <audio src=""></audio>
+    <div class="bottom_m">
+        <div class="sort gwzn">
+            <span class="f_title">购物指南</span>
+            <ul>
+                <li><a name = "f_gouwu" href="#" target="_blank" class="main" rel="nofollow">购物流程</a> </li>
+                <li><a name = "f_jifen" href="#" target="_blank"  rel="nofollow">发票制度</a> </li>
+                <li><a name = "f_fapiao" href="#" target="_blank"  rel="nofollow">服务协议</a> </li>
+                <li><a name = "f_mybook" href="#" target="_blank"  rel="nofollow">会员优惠</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="sort ddfw">
+            <span class="f_title">订单服务</span>
+            <ul>
+                <li><a name = "f_jifen" href="#" target="_blank" class="main" rel="nofollow">配送服务查询</a> </li>
+                <li><a name = "f_lipinka" href="#" target="_blank"  rel="nofollow">订单状态说明</a> </li>
+                <li><a name = "f_ershoushu" href="#" target="_blank"  rel="nofollow">自助取消订单</a> </li>
+                <li><a name = "f_shouji" href="#" target="_blank"  rel="nofollow">自助修改订单</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="sort zffs">
+            <span class="f_title">支付方式</span>
+            <ul>
+                <li><a name = "f_tuihuanhuoliucheng" href="#" target="_blank" rel="nofollow">货到付款</a> </li>
+                <li><a name = "f_tuihuanhuo " href="#" target="_blank" rel="nofollow">网上支付</a> </li>
+                <li><a name = "f_huanhuo " href="#" target="_blank"  rel="nofollow">礼品卡支付</a> </li>
+                <li><a name = "f_tuihuo " href="#" target="_blank"  rel="nofollow">银行转账</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="sort psfs">
+            <span class="f_title">配送方式</span>
+            <ul>
+                <li><a name = "f_huodaofukuan" href="#" target="_blank" class="main" rel="nofollow">当日递</a> </li>
+                <li><a name = "f_yinhangzhuanzhang" href="#" target="_blank" class="main" rel="nofollow">次日达</a> </li>
+                <li><a name = "f_dangdanglijuan" href="#" target="_blank"  rel="nofollow">订单自提</a> </li>
+                <li><a name = "f_dangdanglijuan" href="#" target="_blank"  rel="nofollow">验货与签收</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="sort thh">
+            <span class="f_title">退换货</span>
+            <ul>
+                <li><a name = "f_faq" href="#" target="_blank" rel="nofollow">退换货服务查询</a> </li>
+                <li><a name = "f_zhaohuimima" href="#" target="_blank"  rel="nofollow">自助申请退换货</a> </li>
+                <li><a name = "f_huikuandan" href="#" target="_blank"  rel="nofollow">退换货进度查询</a> </li>
+                <li><a name = "f_tuiding" href="#" target="_blank"  rel="nofollow">退款方式和时间</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="sort sjfw">
+            <span class="f_title">商家服务</span>
+            <ul>
+                <li><a name = "f_zhaohuimima" href="#" target="_blank"  rel="nofollow">商家中心</a> </li>
+                <li><a name = "f_huikuandan " href="#" target="_blank"  rel="nofollow">运营服务</a> </li>
+                <li><a name = "f_tuiding " href="#" target="_blank" rel="nofollow">加入尾品汇</a> </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_b">
+        <div class="bottom_nav">
+            <a href="#" target="_blank" rel="nofollow">书屋简介</a><span class="sep">|</span>
+            <a href="#" target="_blank">诚聘英才</a><span class="sep">|</span>
+            <a href="#" target="_blank">网站联盟</a><span class="sep">|</span>
+            <a href="#" target="_blank">书屋招商</a><span class="sep">|</span>
+            <a href="#" target="_blank" rel="nofollow">机构销售</a><span class="sep">|</span>
+            <a href="#" target="_blank">手机书屋</a><span class="sep">|</span>
+            <a href="#" target="_blank">官方Blog</a><span class="sep"></span>
+        </div>
+    </div>
+</div>
+
+<script language="JavaScript" src="js/js.js"></script>
+<script language="JavaScript" src="js/autoplay.js"></script>
 </body>
 </html>

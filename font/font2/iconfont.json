@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8106244",
+      "name": "protect",
+      "font_class": "protect",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "8106266",
+      "name": "locking",
+      "font_class": "locking",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "8106271",
+      "name": "relationship",
+      "font_class": "relationship",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "8106279",
+      "name": "callout",
+      "font_class": "callout",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    }
+  ]
+}
